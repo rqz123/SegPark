@@ -1,0 +1,40 @@
+# Python virtual environments
+.venv/
+.venv311/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Model weights and training outputs
+*.pt
+runs/
+yolov8*.pt
+
+# Dataset
+dataset/images/
+dataset/labels/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Output files
+result_output.jpg
+*.jpg
+*.png
+*.jpeg
+
+# Keep sample directory structure but ignore images
+!samples/.gitkeep
+
+# Keep dataset structure
+!dataset/.gitkeep
+!dataset/data.yaml

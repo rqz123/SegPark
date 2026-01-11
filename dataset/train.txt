@@ -1,0 +1,7 @@
+data/images/train/IMG_1904.jpg
+data/images/train/IMG_1905.jpg
+data/images/train/IMG_1906.jpg
+data/images/train/IMG_1907.jpg
+data/images/train/IMG_1909.jpg
+data/images/train/IMG_1910.jpg
+data/images/train/IMG_1911.jpg
