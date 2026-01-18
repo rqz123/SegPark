@@ -40,21 +40,24 @@ except ImportError:
     sys.exit(1)
 
 # Load the Segmentation model (Note the '-seg' suffix)
-# yolov8n-seg.pt is the Nano Segmentation model (fastest)
-print("Loading YOLOv8n-seg model...")
-model = YOLO('yolov8n-seg.pt')
+# yolo11n-seg.pt is the YOLO11 Nano Segmentation model (newest, better accuracy)
+print("Loading YOLO11n-seg model...")
+model = YOLO('yolo11n-seg.pt')
 
 # Train
 print("Starting training...")
 results = model.train(
-    data='/Users/richardzhang/Works/SegPark/dataset/data.yaml',
-    epochs=50,
+    data='dataset/data.yaml',
+    epochs=100,  # Increased for better convergence
     imgsz=640,
     task='segment',  # Explicitly state this is a segmentation task
-    plots=True
+    plots=True,
+    patience=20,  # Early stopping patience
+    save=True,
+    device='cpu'  # Explicitly set CPU (change to 0 for GPU if available)
 )
 
 print("\n" + "=" * 70)
 print("Training complete!")
-print("Best model saved to: runs/segment/train/weights/best.pt")
+print(f"Best model saved to: {results.save_dir / 'weights' / 'best.pt'}")
 print("=" * 70)

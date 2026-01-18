@@ -1,4 +1,4 @@
-path: /Users/richardzhang/Works/SegPark/dataset  # Absolute path to your dataset folder
+path: C:/Works/SegPark/dataset  # Absolute path to your dataset folder
 train: images/train  # Relative path to training images
 val: images/train    # Use the same images for validation (since your dataset is small)
 
